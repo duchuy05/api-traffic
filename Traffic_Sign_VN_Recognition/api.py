@@ -1,5 +1,3 @@
-# app.py
-
 import os
 import numpy as np
 from flask import Flask, request, jsonify
@@ -10,7 +8,7 @@ from tensorflow.keras.preprocessing import image
 
 app = Flask(__name__)
 
-MODEL_PATH = "E:/AI/BTL/API_Traffic/traffic_sign_model_cnn.h5"
+MODEL_PATH = os.path.join(os.path.dirname(__file__), 'traffic_sign_model_cnn.h5')
 model = load_model(MODEL_PATH)
 
 

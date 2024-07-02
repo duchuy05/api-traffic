@@ -1,0 +1,33 @@
+{% extends "base.html" %} {% block content %}
+
+<h2>Nhận dạng biển báo giao thông sử dụng kỹ thuật Học sâu</h2>
+<img src="https://i.ytimg.com/vi/8N9V4uoeNpA/maxresdefault.jpg"
+alt="" style="width: 30%; height:30%">
+
+<div>
+    <form id="upload-file" method="post" enctype="multipart/form-data">
+        <label for="imageUpload" class="upload-label">
+            Chọn một ảnh
+        </label>
+        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+    </form>
+
+    <div class="image-section" style="display:none;">
+        <div class="img-preview">
+            <div id="imagePreview">
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Dự đoán</button>
+        </div>
+    </div>
+
+    <div class="loader" style="display:none;"></div>
+
+    <h3 id="result">
+        <span> </span>
+    </h3>
+
+</div>
+
+{% endblock %}

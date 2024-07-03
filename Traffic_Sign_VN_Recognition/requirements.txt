@@ -229,3 +229,4 @@ xgboost==2.0.1
 xxhash==3.4.1
 yarl==1.9.4
 ydata-profiling==4.6.1
+gunicorn
